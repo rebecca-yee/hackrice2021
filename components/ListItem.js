@@ -15,8 +15,10 @@ export default ListItem;
 const styles = StyleSheet.create({
   heading: {
     color: "black",
+    marginBottom: 5,
   },
   subheading: {
     color: "gray",
+    marginBottom: 10,
   },
 });
