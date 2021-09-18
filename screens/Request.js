@@ -17,8 +17,8 @@ import { createStackNavigator } from "@react-navigation/stack";
 
 const Request = (props) => {
     const [selectedValue, setSelectedValue] = useState("math");
-    const [number1, onChangeNumber1] = useState(null);
-    const [number2, onChangeNumber2] = useState(null);
+    const [selectedValue1, setSelectedValue1] = useState("2");
+    const [selectedValue2, setSelectedValue2] = useState("3");
 
     return (
         <ScrollView style={styles.container}>
@@ -63,11 +63,11 @@ const Request = (props) => {
                     /> */}
                     <Text>Minimum</Text>
                     <Picker
-                        selectedValue={selectedValue}
+                        selectedValue={selectedValue1}
                         style={{ height: 20, width: 100 }}
                         style={styles.dropdown}
                         onValueChange={(itemValue, itemIndex) =>
-                            setSelectedValue(itemValue)
+                            setSelectedValue1(itemValue)
                         }
                     >
                         <Picker.Item label="2" value="2" />
@@ -79,11 +79,11 @@ const Request = (props) => {
                     </Picker>
                     <Text>Maximum</Text>
                     <Picker
-                        selectedValue={selectedValue}
+                        selectedValue={selectedValue2}
                         style={{ height: 20, width: 100 }}
                         style={styles.dropdown}
                         onValueChange={(itemValue, itemIndex) =>
-                            setSelectedValue(itemValue)
+                            setSelectedValue2(itemValue)
                         }
                     >
                         <Picker.Item label="3" value="3" />
