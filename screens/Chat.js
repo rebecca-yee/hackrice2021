@@ -16,7 +16,6 @@ class Find extends React.Component {
 
     return (
       <View style={styles.container}>
-
         <View style={styles.balance}></View>
         <View style={styles.input}>
           <Text>My Chats</Text>
@@ -29,7 +28,7 @@ class Find extends React.Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#EDF8F2",
+    backgroundColor: "#D4F1F4",
   },
   statusbar: {
     backgroundColor: "rgb(192, 165, 192)",

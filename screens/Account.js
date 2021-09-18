@@ -21,8 +21,12 @@ function Account() {
         <ListItem title="Name" subtitle="John Smith" />
         <ListItem title="Username" subtitle="@username" />
 
-        <Text style={{ marginBottom: 10 }}>About</Text>
-        <Text style={{ color: "gray" }}>
+        <Text
+          style={{ marginBottom: 10, color: "#05445E", fontWeight: "bold" }}
+        >
+          About
+        </Text>
+        <Text style={{ color: "black" }}>
           When classes were converted to a virtual format due to the rise of
           COVID-19, in-person interactions, like asking a classmate to borrow a
           pencil or walking together with classmates to lunch, were no more. It
@@ -44,7 +48,7 @@ function Account() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#EDF8F2",
+    backgroundColor: "#D4F1F4",
   },
   body: {
     margin: 30,

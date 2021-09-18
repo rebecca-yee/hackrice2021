@@ -14,11 +14,12 @@ export default ListItem;
 
 const styles = StyleSheet.create({
   heading: {
-    color: "black",
+    color: "#05445E",
+    fontWeight: "bold",
     marginBottom: 5,
   },
   subheading: {
-    color: "gray",
+    color: "black",
     marginBottom: 10,
   },
 });
