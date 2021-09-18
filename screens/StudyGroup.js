@@ -4,6 +4,19 @@ import { Platform, StyleSheet, Text, View, Button, ScrollView } from "react-nati
 // components
 
 class StudyGroup extends React.Component {
+
+  constructor() {
+    super();
+
+    this.state = {
+      groups: [
+        { id: 0, class: 'MATH', num: 5 },
+        { id: 1, class: 'SCIENCE', num: 2 }
+      ]
+    }
+
+  }
+
   render() {
     const statusbar =
       Platform.OS == "ios" ? (
