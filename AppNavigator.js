@@ -7,13 +7,13 @@ import Home from "./components/Home";
 const Tab = createBottomTabNavigator();
 
 const Tabs = () => {
-  return (
-    <Tab.Navigator>
-      <Tab.Screen name="my chats" component={Find} />
-      <Tab.Screen name="my groups" component={Group} />
-      <Tab.Screen name="my account" component={Home} />
-    </Tab.Navigator>
-  );
+    return (
+        <Tab.Navigator>
+            <Tab.Screen name="my chats" component={Find} />
+            <Tab.Screen name="my groups" component={Group} />
+            <Tab.Screen name="my account" component={Home} />
+        </Tab.Navigator>
+    );
 };
 
 export default Tabs;
