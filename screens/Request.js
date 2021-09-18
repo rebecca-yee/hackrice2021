@@ -1,31 +1,35 @@
 import React, { useState, useEffect } from "react";
-import { Platform, StyleSheet, Text, View, Button, ScrollView } from "react-native";
+import { Platform, StyleSheet, Text, View, Button, ScrollView, Picker } from "react-native";
 import { NavigationContainer } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
 
 // components
 
-class Request extends React.Component {
+const Request = () => {
 
+    const [selectedValue, setSelectedValue] = useState("math");
 
-    render() {
-        const statusbar =
-            Platform.OS == "ios" ? (
-                <View style={styles.statusbar}></View>
-            ) : (
-                <View></View>
-            );
+    return (
+        <View style={styles.container}>
 
-        return (
-            <View style={styles.container}>
-
-                <View style={styles.balance}></View>
-                <View style={styles.input}>
-                    <Text>Your Groups:</Text>
-                </View>
+            <View style={styles.balance}></View>
+            <View style={styles.input}>
+                <Text>Find a Group!</Text>
+                <Picker
+                    selectedValue={selectedValue}
+                    style={{ height: 50, width: 150 }}
+                    onValueChange={(itemValue, itemIndex) => setSelectedValue(itemValue)}
+                >
+                    <Picker.Item label="Math" value="math" />
+                    <Picker.Item label="Science" value="sci" />
+                    <Picker.Item label="English" value="eng" />
+                    <Picker.Item label="History" value="his" />
+                    <Picker.Item label="Art" value="art" />
+                    <Picker.Item label="Music" value="mus" />
+                </Picker>
             </View>
-        );
-    }
+        </View>
+    );
 }
 
 const styles = StyleSheet.create({
