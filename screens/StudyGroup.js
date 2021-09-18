@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Card from "../components/Card";
 import ListItem from "../components/ListItem";
-import Request from "./Request"
+import Request from "./Request";
 import {
   Platform,
   StyleSheet,
@@ -19,9 +19,9 @@ class StudyGroup extends React.Component {
 
     this.state = {
       name: "Jackie Wu",
-      clas: 'MATH',
-      input1: '',
-      input2: '',
+      clas: "MATH",
+      input1: "",
+      input2: "",
       groups: [
         { id: 0, class: "MATH", num: 5 },
         { id: 0, class: "SCIENCE", num: 2 },
@@ -37,29 +37,28 @@ class StudyGroup extends React.Component {
         { id: 2, name: "Taylor Shui", class: "ART", min: 3, max: 5 },
         { id: 2, name: "Taylor Shui", class: "SCIENCE", min: 3, max: 5 },
         { id: 3, name: "Theo Schweizer", class: "ART", min: 3, max: 5 },
-        { id: 3, name: "Theo Schweizer", class: "HISTORY", min: 3, max: 5 }
-      ]
+        { id: 3, name: "Theo Schweizer", class: "HISTORY", min: 3, max: 5 },
+      ],
     };
   }
 
   addNew() {
     let mine = this.state.mine;
 
-    mine.unshift(
-      {
-        id: 0,
-        name: "Jackie Wu",
-        class: this.state.clas,
-        min: this.state.input1,
-        max: this.state.input2
-      });
+    mine.unshift({
+      id: 0,
+      name: "Jackie Wu",
+      class: this.state.clas,
+      min: this.state.input1,
+      max: this.state.input2,
+    });
 
     this.setState({
       mine,
       // clas: 'MATH',
       // input1: '',
       // input2: ''
-    })
+    });
   }
 
   render() {
@@ -72,7 +71,6 @@ class StudyGroup extends React.Component {
 
     return (
       <View style={styles.container}>
-
         <View style={styles.balance}></View>
         <View style={styles.input}>
           <Text>Your Groups:</Text>
@@ -86,8 +84,9 @@ class StudyGroup extends React.Component {
           </ScrollView>
         </View>
         <Request
-          changeValue={clas => this.setState({ clas })}
-          addNew={() => this.addNew()} />
+          changeValue={(clas) => this.setState({ clas })}
+          addNew={() => this.addNew()}
+        />
         {/* <ScrollView>
           {this.state.mine.map((m) => (
             <Text>{m.class}, {m.min}, {m.max}</Text>
@@ -101,7 +100,7 @@ class StudyGroup extends React.Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#EDF8F2",
+    backgroundColor: "#D4F1F4",
   },
   statusbar: {
     backgroundColor: "rgb(192, 165, 192)",
