@@ -10,34 +10,18 @@ import {
 } from "react-native";
 import { NavigationContainer } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
+import ListItem from "../components/ListItem";
 
 // components
 
-class Account extends React.Component {
-  constructor() {
-    super();
-    this.state = {
-      name: "Jackie Wu",
-    };
-  }
-
-  render() {
-    const statusbar =
-      Platform.OS == "ios" ? (
-        <View style={styles.statusbar}></View>
-      ) : (
-        <View></View>
-      );
-
-    return (
-      <View style={styles.container}>
-        <View style={styles.balance}></View>
-        <View style={styles.input}>
-          <Text>Name: {this.state.name}</Text>
-        </View>
-      </View>
-    );
-  }
+function Account() {
+  return (
+    <View>
+      <ListItem title="Name" subtitle="John Smith" />
+      <ListItem title="Username" subtitle="@username" />
+      <ListItem title="About" subtitle="insert about paragraph here" />
+    </View>
+  );
 }
 
 const styles = StyleSheet.create({
