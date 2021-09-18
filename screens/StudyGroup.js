@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Platform, StyleSheet, Text, View, Button, ScrollView } from "react-native";
-import { NavigationContainer } from "@react-navigation/native";
-import { createStackNavigator } from "@react-navigation/stack";
+import { createSwitchNavigator, createStackNavigator } from 'react-navigation'
 
 // components
 
@@ -39,6 +38,7 @@ class StudyGroup extends React.Component {
               </Text>
             )}
           </ScrollView>
+
         </View>
       </View>
     );
