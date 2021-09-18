@@ -1,11 +1,22 @@
 import React, { useState, useEffect } from "react";
-import { Platform, StyleSheet, Text, View, Button } from "react-native";
+import { Platform, StyleSheet, Text, View, Button, ScrollView } from "react-native";
 import { NavigationContainer } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
 
 // components
 
 class StudyGroup extends React.Component {
+
+  constructor() {
+    super();
+    this.state = {
+      groups: [
+        { id: 0, class: 'MATH', num: 2 },
+        { id: 1, class: 'SCIENCE', num: 5 }
+      ]
+    }
+  }
+
   render() {
     const statusbar =
       Platform.OS == "ios" ? (
@@ -16,11 +27,18 @@ class StudyGroup extends React.Component {
 
     return (
       <View style={styles.container}>
-        {statusbar}
 
         <View style={styles.balance}></View>
         <View style={styles.input}>
-          <Text>Group</Text>
+          <Text>Your Groups:</Text>
+          <ScrollView>
+            {this.state.groups.map((group) =>
+              <Text>
+                {group.class}
+                {group.num}
+              </Text>
+            )}
+          </ScrollView>
         </View>
       </View>
     );
