@@ -20,7 +20,7 @@ class Home extends React.Component {
 
         <View style={styles.balance}></View>
         <View style={styles.input}>
-          <Text>Homepage</Text>
+          <Text>My Account</Text>
         </View>
       </View>
     );

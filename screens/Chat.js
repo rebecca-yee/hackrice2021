@@ -5,7 +5,7 @@ import { createStackNavigator } from "@react-navigation/stack";
 
 // components
 
-class Group extends React.Component {
+class Find extends React.Component {
   render() {
     const statusbar =
       Platform.OS == "ios" ? (
@@ -20,7 +20,7 @@ class Group extends React.Component {
 
         <View style={styles.balance}></View>
         <View style={styles.input}>
-          <Text>Group</Text>
+          <Text>My Chats</Text>
         </View>
       </View>
     );
@@ -45,4 +45,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default Group;
+export default Find;
