@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import { Platform, StyleSheet, Text, View, Button, ScrollView } from "react-native";
-import { createSwitchNavigator, createStackNavigator } from 'react-navigation'
 
 // components
 
