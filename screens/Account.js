@@ -20,7 +20,22 @@ function Account() {
       <View style={styles.body}>
         <ListItem title="Name" subtitle="John Smith" />
         <ListItem title="Username" subtitle="@username" />
-        <ListItem title="About" subtitle="insert about paragraph here" />
+
+        <Text>About</Text>
+        <Text>
+          When classes were converted to a virtual format due to the rise of
+          COVID-19, in-person interactions, like asking a classmate to borrow a
+          pencil or walking together with classmates to lunch, were no more. It
+          was often these interactions that allowed students in the same class
+          to build relationships, and eventually solid friendships.{"\n"}
+          {"\n"}Aside from awkward breakout rooms, students have almost no
+          connection with each other with a virtual teaching format. This makes
+          it harder for students to receive academic help from their peers or
+          form study groups to prepare for exams. We created StudyBuddy to
+          facilitate interactions between students, allowing them to enhance
+          their collaborative learning experience while also maintaining
+          connections with their peers.
+        </Text>
       </View>
     </View>
   );
