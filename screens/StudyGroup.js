@@ -5,17 +5,6 @@ import { createSwitchNavigator, createStackNavigator } from 'react-navigation'
 // components
 
 class StudyGroup extends React.Component {
-
-  constructor() {
-    super();
-    this.state = {
-      groups: [
-        { id: 0, class: 'MATH', num: 2 },
-        { id: 1, class: 'SCIENCE', num: 5 }
-      ]
-    }
-  }
-
   render() {
     const statusbar =
       Platform.OS == "ios" ? (
@@ -26,6 +15,7 @@ class StudyGroup extends React.Component {
 
     return (
       <View style={styles.container}>
+        {statusbar}
 
         <View style={styles.balance}></View>
         <View style={styles.input}>
@@ -40,7 +30,7 @@ class StudyGroup extends React.Component {
           </ScrollView>
 
         </View>
-      </View>
+      </View >
     );
   }
 }
