@@ -6,43 +6,43 @@ import { createStackNavigator } from "@react-navigation/stack";
 // components
 
 class Group extends React.Component {
-  render() {
-    const statusbar =
-      Platform.OS == "ios" ? (
-        <View style={styles.statusbar}></View>
-      ) : (
-        <View></View>
-      );
+    render() {
+        const statusbar =
+            Platform.OS == "ios" ? (
+                <View style={styles.statusbar}></View>
+            ) : (
+                <View></View>
+            );
 
-    return (
-      <View style={styles.container}>
-        {statusbar}
+        return (
+            <View style={styles.container}>
+                {statusbar}
 
-        <View style={styles.balance}></View>
-        <View style={styles.input}>
-          <Text>Group</Text>
-        </View>
-      </View>
-    );
-  }
+                <View style={styles.balance}></View>
+                <View style={styles.input}>
+                    <Text>Group</Text>
+                </View>
+            </View>
+        );
+    }
 }
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: "#EDF8F2",
-  },
-  statusbar: {
-    backgroundColor: "rgb(192, 165, 192)",
-    height: 50,
-  },
-  balance: {
-    paddingBottom: 20,
-  },
-  input: {
-    paddingBottom: 20,
-    alignItems: "center",
-  },
+    container: {
+        flex: 1,
+        backgroundColor: "#EDF8F2",
+    },
+    statusbar: {
+        backgroundColor: "rgb(192, 165, 192)",
+        height: 50,
+    },
+    balance: {
+        paddingBottom: 20,
+    },
+    input: {
+        paddingBottom: 20,
+        alignItems: "center",
+    },
 });
 
 export default Group;
