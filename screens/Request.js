@@ -30,7 +30,7 @@ const Request = () => {
                     <View>
                         <Picker
                             selectedValue={selectedValue}
-                            style={{ height: 50, width: 150 }}
+                            style={{ height: 20, width: 100 }}
                             style={styles.dropdown}
                             onValueChange={(itemValue, itemIndex) =>
                                 setSelectedValue(itemValue)
@@ -46,7 +46,7 @@ const Request = () => {
                     </View>
                 </View>
                 <View style={styles.size}>
-                    <Text>Minimum Group Size:</Text>
+                    {/* <Text>Minimum Group Size:</Text> */}
                     <TextInput
                         onChangeText={onChangeNumber1}
                         value={number1}
@@ -54,7 +54,7 @@ const Request = () => {
                         keyboardType="numeric"
                     />
 
-                    <Text>Maximum Group Size:</Text>
+                    {/* <Text>Maximum Group Size:</Text> */}
                     <TextInput
 
                         onChangeText={onChangeNumber2}
@@ -64,7 +64,7 @@ const Request = () => {
                     />
                 </View>
                 <TouchableOpacity style={styles.addButton}>
-                    <Text style={styles.addButtonText}>ADD</Text>
+                    <Text style={styles.addButtonText}>submit</Text>
                 </TouchableOpacity>
             </View>
         </View>
@@ -85,11 +85,11 @@ const styles = StyleSheet.create({
     },
     dropdown: {
         paddingBottom: 0,
-        paddingTop: 50
+        paddingTop: 0
     },
     size: {
         paddingBottom: 0,
-        paddingTop: 100
+        paddingTop: 0
     },
     addButton: {
         width: 100,
@@ -104,7 +104,7 @@ const styles = StyleSheet.create({
         color: '#EDF8F2',
         fontSize: 18,
         fontWeight: '700',
-        fontSize: 30,
+        fontSize: 20,
     },
 
 });

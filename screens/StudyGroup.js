@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Card from "../components/Card";
 import ListItem from "../components/ListItem";
+import Request from "./Request"
 import {
   Platform,
   StyleSheet,
@@ -19,8 +20,12 @@ class StudyGroup extends React.Component {
     this.state = {
       groups: [
         { id: 0, class: "MATH", num: 5 },
-        { id: 1, class: "SCIENCE", num: 2 },
+        { id: 0, class: "SCIENCE", num: 2 },
       ],
+      users: [
+        { id: 1, name: "Rebecca Yee", class: "ART", min: 3, max: 5 },
+        { id: 1, name: "Rebecca Yee", class: "MATH", min: 3, max: 5 }
+      ]
     };
   }
 
@@ -47,6 +52,7 @@ class StudyGroup extends React.Component {
             ))}
           </ScrollView>
         </View>
+        <Request />
       </View>
     );
   }
