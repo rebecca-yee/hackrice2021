@@ -21,7 +21,7 @@ const Request = () => {
     const [number2, onChangeNumber2] = useState(null);
 
     return (
-        <View style={styles.container}>
+        <ScrollView style={styles.container}>
             <View style={styles.body}>
                 <Text>Find a Group!</Text>
                 <View>
@@ -46,7 +46,7 @@ const Request = () => {
                     </View>
                 </View>
                 <View style={styles.size}>
-                    {/* <Text>Minimum Group Size:</Text> */}
+                    <Text>Minimum Group Size:</Text>
                     <TextInput
                         onChangeText={onChangeNumber1}
                         value={number1}
@@ -54,7 +54,7 @@ const Request = () => {
                         keyboardType="numeric"
                     />
 
-                    {/* <Text>Maximum Group Size:</Text> */}
+                    <Text>Maximum Group Size:</Text>
                     <TextInput
 
                         onChangeText={onChangeNumber2}
@@ -67,7 +67,7 @@ const Request = () => {
                     <Text style={styles.addButtonText}>submit</Text>
                 </TouchableOpacity>
             </View>
-        </View>
+        </ScrollView>
     );
 };
 
