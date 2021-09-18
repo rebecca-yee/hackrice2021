@@ -31,20 +31,7 @@ const Request = () => {
                         <Picker.Item label="Music" value="mus" />
                     </Picker>
                 </View>
-                <Text>
-                    {"\n"}
-                    {"\n"}
-                    {"\n"}
-                    {"\n"}
-                    {"\n"}
-                    {"\n"}
-                    {"\n"}
-                    {"\n"}
-                    {"\n"}
-                    {"\n"}
-                    {"\n"}
-                    {"\n"}
-                </Text>
+
                 <View>
                     <Text>Minimum Group Size:</Text>
                     <TextInput
