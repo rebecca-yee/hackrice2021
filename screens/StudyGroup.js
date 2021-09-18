@@ -18,15 +18,46 @@ class StudyGroup extends React.Component {
     super();
 
     this.state = {
+      name: "Jackie Wu",
+      input1: '',
+      input2: '',
       groups: [
         { id: 0, class: "MATH", num: 5 },
         { id: 0, class: "SCIENCE", num: 2 },
       ],
+      mine: [
+        { id: 0, name: "Jackie Wu", class: "MATH", min: 2, max: 6 },
+        { id: 0, name: "Jackie Wu", class: "SCIENCE", min: 2, max: 6 },
+      ],
+
       users: [
         { id: 1, name: "Rebecca Yee", class: "ART", min: 3, max: 5 },
-        { id: 1, name: "Rebecca Yee", class: "MATH", min: 3, max: 5 }
+        { id: 1, name: "Rebecca Yee", class: "MATH", min: 3, max: 5 },
+        { id: 2, name: "Taylor Shui", class: "ART", min: 3, max: 5 },
+        { id: 2, name: "Taylor Shui", class: "SCIENCE", min: 3, max: 5 },
+        { id: 3, name: "Theo Schweizer", class: "ART", min: 3, max: 5 },
+        { id: 3, name: "Theo Schweizer", class: "HISTORY", min: 3, max: 5 }
       ]
     };
+  }
+
+  addNew() {
+    let mine = this.state.mine;
+
+    mine.unshift(
+      {
+        id: 0,
+        name: "Jackie Wu",
+        class: "MATH",
+        min: this.state.input1,
+        max: this.state.input2
+      });
+
+    this.setState({
+      mine,
+      input1: '',
+      input2: ''
+    })
   }
 
   render() {
@@ -52,7 +83,11 @@ class StudyGroup extends React.Component {
             ))}
           </ScrollView>
         </View>
-        <Request />
+        <Request
+          textChange={input1 => this.setState({ input1 })}
+          textChange={input2 => this.setState({ input2 })}
+          addNew={() => this.addNew()} />
+
       </View>
     );
   }

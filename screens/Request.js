@@ -15,7 +15,7 @@ import { createStackNavigator } from "@react-navigation/stack";
 
 // components
 
-const Request = () => {
+const Request = (props) => {
     const [selectedValue, setSelectedValue] = useState("math");
     const [number1, onChangeNumber1] = useState(null);
     const [number2, onChangeNumber2] = useState(null);
@@ -36,34 +36,65 @@ const Request = () => {
                                 setSelectedValue(itemValue)
                             }
                         >
-                            <Picker.Item label="Math" value="math" />
-                            <Picker.Item label="Science" value="sci" />
-                            <Picker.Item label="English" value="eng" />
-                            <Picker.Item label="History" value="his" />
-                            <Picker.Item label="Art" value="art" />
-                            <Picker.Item label="Music" value="mus" />
+                            <Picker.Item label="Math" value="MATH" />
+                            <Picker.Item label="Science" value="SCIENCE" />
+                            <Picker.Item label="English" value="ENGLISH" />
+                            <Picker.Item label="History" value="HISTORY" />
+                            <Picker.Item label="Art" value="ART" />
+                            <Picker.Item label="Music" value="MUSIC" />
                         </Picker>
                     </View>
                 </View>
                 <View style={styles.size}>
-                    <Text>Minimum Group Size:</Text>
+                    {/* <Text>Minimum Group Size:</Text>
                     <TextInput
-                        onChangeText={onChangeNumber1}
-                        value={number1}
+                        onChangeText={(input1) => props.textChange(input1)}
+                        value={props.input1}
                         placeholder="Minimum Group Size"
                         keyboardType="numeric"
                     />
 
                     <Text>Maximum Group Size:</Text>
                     <TextInput
-
-                        onChangeText={onChangeNumber2}
-                        value={number2}
+                        onChangeText={(input2) => props.textChange(input2)}
+                        value={props.input2}
                         placeholder="Maximum Group Size"
                         keyboardType="numeric"
-                    />
+                    /> */}
+                    <Text>Minimum</Text>
+                    <Picker
+                        selectedValue={selectedValue}
+                        style={{ height: 20, width: 100 }}
+                        style={styles.dropdown}
+                        onValueChange={(itemValue, itemIndex) =>
+                            setSelectedValue(itemValue)
+                        }
+                    >
+                        <Picker.Item label="2" value="2" />
+                        <Picker.Item label="3" value="3" />
+                        <Picker.Item label="4" value="4" />
+                        <Picker.Item label="5" value="5" />
+                        <Picker.Item label="6" value="6" />
+                        <Picker.Item label="7" value="7" />
+                    </Picker>
+                    <Text>Maximum</Text>
+                    <Picker
+                        selectedValue={selectedValue}
+                        style={{ height: 20, width: 100 }}
+                        style={styles.dropdown}
+                        onValueChange={(itemValue, itemIndex) =>
+                            setSelectedValue(itemValue)
+                        }
+                    >
+                        <Picker.Item label="3" value="3" />
+                        <Picker.Item label="4" value="4" />
+                        <Picker.Item label="5" value="5" />
+                        <Picker.Item label="6" value="6" />
+                        <Picker.Item label="7" value="7" />
+                        <Picker.Item label="8" value="8" />
+                    </Picker>
                 </View>
-                <TouchableOpacity style={styles.addButton}>
+                <TouchableOpacity style={styles.addButton} onPress={props.addNew}>
                     <Text style={styles.addButtonText}>submit</Text>
                 </TouchableOpacity>
             </View>
