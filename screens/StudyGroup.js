@@ -34,7 +34,6 @@ class StudyGroup extends React.Component {
 
     return (
       <View style={styles.container}>
-        {statusbar}
 
         <View style={styles.balance}></View>
         <View style={styles.input}>

@@ -63,6 +63,9 @@ const Request = () => {
                         keyboardType="numeric"
                     />
                 </View>
+                <TouchableOpacity style={styles.addButton}>
+                    <Text style={styles.addButtonText}>ADD</Text>
+                </TouchableOpacity>
             </View>
         </View>
     );
@@ -82,10 +85,26 @@ const styles = StyleSheet.create({
     },
     dropdown: {
         paddingBottom: 0,
+        paddingTop: 50
     },
     size: {
         paddingBottom: 0,
-        paddingTop: 200
+        paddingTop: 100
+    },
+    addButton: {
+        width: 100,
+        backgroundColor: 'rgb(192, 165, 192)',
+        alignItems: 'center',
+        justifyContent: 'center',
+        borderTopRightRadius: 10,
+        borderBottomRightRadius: 10,
+
+    },
+    addButtonText: {
+        color: '#EDF8F2',
+        fontSize: 18,
+        fontWeight: '700',
+        fontSize: 30,
     },
 
 });
