@@ -1,11 +1,29 @@
 import React, { useState, useEffect } from "react";
-import { Platform, StyleSheet, Text, View, Button } from "react-native";
-import { NavigationContainer } from "@react-navigation/native";
-import { createStackNavigator } from "@react-navigation/stack";
+import Card from "../components/Card";
+import ListItem from "../components/ListItem";
+import {
+  Platform,
+  StyleSheet,
+  Text,
+  View,
+  Button,
+  ScrollView,
+} from "react-native";
 
 // components
 
 class StudyGroup extends React.Component {
+  constructor() {
+    super();
+
+    this.state = {
+      groups: [
+        { id: 0, class: "MATH", num: 5 },
+        { id: 1, class: "SCIENCE", num: 2 },
+      ],
+    };
+  }
+
   render() {
     const statusbar =
       Platform.OS == "ios" ? (
@@ -20,7 +38,17 @@ class StudyGroup extends React.Component {
 
         <View style={styles.balance}></View>
         <View style={styles.input}>
-          <Text>Group</Text>
+          <Text>Your Groups:</Text>
+          <ScrollView>
+            {this.state.groups.map((group) => (
+              <Card>
+                <Text>
+                  <ListItem title="Subject" subtitle={group.class} />
+                  <ListItem title="Number of students" subtitle={group.num} />
+                </Text>
+              </Card>
+            ))}
+          </ScrollView>
         </View>
       </View>
     );
