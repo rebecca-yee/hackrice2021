@@ -5,7 +5,7 @@ import { createStackNavigator } from "@react-navigation/stack";
 
 // components
 
-class Home extends React.Component {
+class StudyGroup extends React.Component {
   render() {
     const statusbar =
       Platform.OS == "ios" ? (
@@ -20,7 +20,7 @@ class Home extends React.Component {
 
         <View style={styles.balance}></View>
         <View style={styles.input}>
-          <Text>Homepage</Text>
+          <Text>Group</Text>
         </View>
       </View>
     );
@@ -45,4 +45,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default Home;
+export default StudyGroup;

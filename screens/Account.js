@@ -1,11 +1,26 @@
 import React, { useState, useEffect } from "react";
-import { Platform, StyleSheet, Text, View, Button } from "react-native";
+import {
+  Platform,
+  StyleSheet,
+  Text,
+  View,
+  Button,
+  ScrollView,
+  TextInput,
+} from "react-native";
 import { NavigationContainer } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
 
 // components
 
-class Find extends React.Component {
+class Account extends React.Component {
+  constructor() {
+    super();
+    this.state = {
+      name: "Jackie Wu",
+    };
+  }
+
   render() {
     const statusbar =
       Platform.OS == "ios" ? (
@@ -16,11 +31,9 @@ class Find extends React.Component {
 
     return (
       <View style={styles.container}>
-        {statusbar}
-
         <View style={styles.balance}></View>
         <View style={styles.input}>
-          <Text>Find Friends</Text>
+          <Text>Name: {this.state.name}</Text>
         </View>
       </View>
     );
@@ -45,4 +58,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default Find;
+export default Account;
