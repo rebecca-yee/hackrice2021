@@ -1,20 +1,27 @@
 import React, { useState, useEffect } from "react";
-import { Platform, StyleSheet, Text, View, Button, ScrollView } from "react-native";
+import Card from "../components/Card";
+import ListItem from "../components/ListItem";
+import {
+  Platform,
+  StyleSheet,
+  Text,
+  View,
+  Button,
+  ScrollView,
+} from "react-native";
 
 // components
 
 class StudyGroup extends React.Component {
-
   constructor() {
     super();
 
     this.state = {
       groups: [
-        { id: 0, class: 'MATH', num: 5 },
-        { id: 1, class: 'SCIENCE', num: 2 }
-      ]
-    }
-
+        { id: 0, class: "MATH", num: 5 },
+        { id: 1, class: "SCIENCE", num: 2 },
+      ],
+    };
   }
 
   render() {
@@ -33,16 +40,17 @@ class StudyGroup extends React.Component {
         <View style={styles.input}>
           <Text>Your Groups:</Text>
           <ScrollView>
-            {this.state.groups.map((group) =>
-              <Text>
-                {group.class}
-                {group.num}
-              </Text>
-            )}
+            {this.state.groups.map((group) => (
+              <Card>
+                <Text>
+                  <ListItem title="Subject" subtitle={group.class} />
+                  <ListItem title="Number of students" subtitle={group.num} />
+                </Text>
+              </Card>
+            ))}
           </ScrollView>
-
         </View>
-      </View >
+      </View>
     );
   }
 }
