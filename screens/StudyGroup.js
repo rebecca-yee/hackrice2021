@@ -42,10 +42,8 @@ class StudyGroup extends React.Component {
           <ScrollView>
             {this.state.groups.map((group) => (
               <Card>
-                <Text>
-                  <ListItem title="Subject" subtitle={group.class} />
-                  <ListItem title="Number of students" subtitle={group.num} />
-                </Text>
+                <ListItem title="Subject" subtitle={group.class} />
+                <ListItem title="Number of students" subtitle={group.num} />
               </Card>
             ))}
           </ScrollView>

@@ -4,9 +4,7 @@ import { StyleSheet, View } from "react-native";
 export default function Card(props) {
   return (
     <View style={styles.card}>
-      <View style={styles.cardContent}></View>
-      {props.children}
-      {/* grabs whatever is nested in between Card component and displays them as children here */}
+      <View style={styles.cardContent}>{props.children}</View>
     </View>
   );
 }
@@ -15,7 +13,7 @@ const styles = StyleSheet.create({
   card: {
     borderRadius: 6,
     elevation: 3,
-    backgroundColor: "#FFF",
+    backgroundColor: "white",
     shadowOffset: {
       width: 1,
       height: 1,
@@ -29,7 +27,6 @@ const styles = StyleSheet.create({
     paddingVertical: 30,
   },
   cardContent: {
-    // marginHorizontal: 18,
-    // marginVertical: 10,
+    fontSize: 10,
   },
 });

@@ -16,10 +16,12 @@ import ListItem from "../components/ListItem";
 
 function Account() {
   return (
-    <View>
-      <ListItem title="Name" subtitle="John Smith" />
-      <ListItem title="Username" subtitle="@username" />
-      <ListItem title="About" subtitle="insert about paragraph here" />
+    <View style={styles.container}>
+      <View style={styles.body}>
+        <ListItem title="Name" subtitle="John Smith" />
+        <ListItem title="Username" subtitle="@username" />
+        <ListItem title="About" subtitle="insert about paragraph here" />
+      </View>
     </View>
   );
 }
@@ -28,6 +30,9 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: "#EDF8F2",
+  },
+  body: {
+    margin: 30,
   },
   statusbar: {
     backgroundColor: "rgb(192, 165, 192)",
