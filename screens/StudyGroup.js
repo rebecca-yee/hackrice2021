@@ -135,11 +135,11 @@ class StudyGroup extends React.Component {
           </ScrollView>
         </View>
         <View style={{ flexDirection: "row", alignItems: "center" }}>
-          <View style={{ flex: 1, height: 1, backgroundColor: "#05445E" }} />
+          <View style={{ flex: 1, height: 2, backgroundColor: "#05445E" }} />
           <View>
             <Text
               style={{
-                width: 50,
+                width: 100,
                 textAlign: "center",
                 fontFamily: "Avenir",
                 fontWeight: "bold",
@@ -149,7 +149,7 @@ class StudyGroup extends React.Component {
               Find a Group!
             </Text>
           </View>
-          <View style={{ flex: 1, height: 1, backgroundColor: "#05445E" }} />
+          <View style={{ flex: 1, height: 2, backgroundColor: "#05445E" }} />
         </View>
         <ScrollView>
           <Text
@@ -232,7 +232,7 @@ class StudyGroup extends React.Component {
             style={styles.addButton}
             onPress={this.addNew.bind(this)}
           >
-            <Text style={styles.addButtonText}>submit</Text>
+            <Text style={styles.addButtonText}>Submit</Text>
           </TouchableOpacity>
         </ScrollView>
       </View>

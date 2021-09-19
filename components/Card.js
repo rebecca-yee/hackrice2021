@@ -1,10 +1,11 @@
 import React from "react";
-import { StyleSheet, View } from "react-native";
+import { StyleSheet, View, Text } from "react-native";
 
 export default function Card(props) {
   return (
     <View style={styles.card}>
-      <View style={styles.cardContent}>{props.children}</View>
+      <View>{props.children}</View>
+      <Text style={styles.cardContent}>Press me to chat with your group!</Text>
     </View>
   );
 }
@@ -24,9 +25,11 @@ const styles = StyleSheet.create({
     marginHorizontal: 4,
     marginVertical: 6,
     paddingHorizontal: 40,
-    paddingVertical: 10,
+    paddingVertical: 20,
   },
   cardContent: {
-    fontSize: 10,
+    fontSize: 15,
+    fontFamily: "Avenir",
+    fontWeight: "bold",
   },
 });
