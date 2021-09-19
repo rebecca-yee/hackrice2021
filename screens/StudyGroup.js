@@ -158,7 +158,7 @@ class StudyGroup extends React.Component {
               fontFamily: "Avenir",
               fontSize: 20,
               textAlign: "center",
-              top: 80,
+              top: 50,
             }}
           >
             Choose Class
@@ -173,12 +173,12 @@ class StudyGroup extends React.Component {
             onValueChange={(value) => this.add(value)}
             style={{ width: 200, left: 90 }}
           >
-            <Picker.Item label="MATH 355" value="MATH" />
-            <Picker.Item label="POLI 212" value="POLI" />
-            <Picker.Item label="ENGL 305" value="ENGL" />
-            <Picker.Item label="STAT 410" value="STAT" />
-            <Picker.Item label="MUSI 317" value="MUSI" />
-            <Picker.Item label="COMP 140" value="COMP" />
+            <Picker.Item label="MATH 355" value="MATH 355" />
+            <Picker.Item label="POLI 212" value="POLI 212" />
+            <Picker.Item label="ENGL 305" value="ENGL 305" />
+            <Picker.Item label="STAT 410" value="STAT 410" />
+            <Picker.Item label="MUSI 317" value="MUSI 317" />
+            <Picker.Item label="COMP 140" value="COMP 140" />
           </Picker>
           <Text
             style={{
@@ -186,7 +186,7 @@ class StudyGroup extends React.Component {
               fontFamily: "Avenir",
               fontSize: 20,
               textAlign: "center",
-              top: 80,
+              top: 50,
             }}
           >
             Minimum Size
@@ -199,6 +199,9 @@ class StudyGroup extends React.Component {
             <Picker.Item label="2" value="2" />
             <Picker.Item label="3" value="3" />
             <Picker.Item label="4" value="4" />
+            <Picker.Item label="5" value="5" />
+            <Picker.Item label="6" value="6" />
+            <Picker.Item label="7" value="7" />
           </Picker>
           <Text
             style={{
@@ -206,7 +209,7 @@ class StudyGroup extends React.Component {
               fontFamily: "Avenir",
               fontSize: 20,
               textAlign: "center",
-              top: 80,
+              top: 50,
             }}
           >
             Maximum Size
@@ -219,6 +222,9 @@ class StudyGroup extends React.Component {
             <Picker.Item label="5" value="5" />
             <Picker.Item label="6" value="6" />
             <Picker.Item label="7" value="7" />
+            <Picker.Item label="8" value="8" />
+            <Picker.Item label="9" value="9" />
+            <Picker.Item label="10" value="10" />
           </Picker>
           <TouchableOpacity
             style={styles.addButton}

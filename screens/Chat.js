@@ -6,7 +6,7 @@ import { GiftedChat } from 'react-native-gifted-chat'
 
 // components
 
-export function Find() {
+export function Chat() {
   const [messages, setMessages] = useState([]);
 
   useEffect(() => {
@@ -57,4 +57,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default Find;
+export default Chat;
