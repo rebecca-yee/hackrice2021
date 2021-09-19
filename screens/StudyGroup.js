@@ -29,21 +29,21 @@ class StudyGroup extends React.Component {
       input1: "2",
       input2: "5",
       groups: [
-        { class: "MATH", num: 5 },
-        { class: "SCIENCE", num: 2 },
+        { class: "MATH 355", num: 5 },
+        { class: "COMP 140", num: 3 },
       ],
       mine: [
-        { id: 0, name: "Jackie Wu", clas: "MATH", min: 2, max: 6 },
-        { id: 0, name: "Jackie Wu", clas: "SCIENCE", min: 4, max: 7 },
+        { id: 0, name: "Jackie Wu", clas: "MATH 355", min: 4, max: 6 },
+        { id: 0, name: "Jackie Wu", clas: "COMP 140", min: 3, max: 7 },
       ],
 
       users: [
-        { id: 1, name: "Rebecca Yee", class: "ART", min: 3, max: 5 },
-        { id: 1, name: "Rebecca Yee", class: "MATH", min: 3, max: 5 },
-        { id: 2, name: "Taylor Shui", class: "ART", min: 3, max: 5 },
-        { id: 2, name: "Taylor Shui", class: "SCIENCE", min: 3, max: 5 },
-        { id: 3, name: "Theo Schweizer", class: "ART", min: 3, max: 5 },
-        { id: 3, name: "Theo Schweizer", class: "HISTORY", min: 3, max: 5 },
+        { id: 1, name: "Rebecca Yee", class: "MUSI 317", min: 3, max: 5 },
+        { id: 1, name: "Rebecca Yee", class: "MATH 355", min: 3, max: 5 },
+        { id: 2, name: "Taylor Shui", class: "MUSI 317", min: 3, max: 5 },
+        { id: 2, name: "Taylor Shui", class: "COMP 140", min: 3, max: 5 },
+        { id: 3, name: "Theo Schweizer", class: "MUSI 317", min: 3, max: 5 },
+        { id: 3, name: "Theo Schweizer", class: "FWIS 189", min: 3, max: 5 },
       ],
     };
   }
@@ -161,12 +161,12 @@ class StudyGroup extends React.Component {
             onValueChange={value => this.add(value)
             }
           >
-            <Picker.Item label="Math" value="MATH" />
-            <Picker.Item label="Science" value="SCIENCE" />
-            <Picker.Item label="English" value="ENGLISH" />
-            <Picker.Item label="History" value="HISTORY" />
-            <Picker.Item label="Art" value="ART" />
-            <Picker.Item label="Music" value="MUSIC" />
+            <Picker.Item label="MATH 355" value="MATH" />
+            <Picker.Item label="POLI 212" value="POLI" />
+            <Picker.Item label="ENGL 305" value="ENGL" />
+            <Picker.Item label="STAT 410" value="STAT" />
+            <Picker.Item label="MUSI 317" value="MUSI" />
+            <Picker.Item label="COMP 140" value="COMP" />
           </Picker>
           <Text>Minimum Size</Text>
           <Picker
