@@ -62,6 +62,12 @@ const Request = (props) => {
                         keyboardType="numeric"
                     /> */}
                     <Text>Minimum</Text>
+
+                    <TextInput
+                        style={styles.input}
+                        onChangeText={(input1) => props.textChange(input1)}
+                        value={props.input1}
+                    />
                     {/* <Picker
                         selectedValue={selectedValue1}
                         style={{ height: 20, width: 100 }}
