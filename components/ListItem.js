@@ -17,9 +17,13 @@ const styles = StyleSheet.create({
     color: "#05445E",
     fontWeight: "bold",
     marginBottom: 5,
+    fontFamily: "Avenir",
+    fontSize: 20,
   },
   subheading: {
     color: "black",
     marginBottom: 10,
+    fontFamily: "Avenir",
+    fontSize: 20,
   },
 });

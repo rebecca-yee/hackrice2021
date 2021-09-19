@@ -23,13 +23,11 @@ const Request = (props) => {
   return (
     <ScrollView style={styles.container}>
       <View style={styles.body}>
-        <Text>Find a Group!</Text>
         <View>
           <Text>Class:</Text>
           <View>
             <Picker
               selectedValue={selectedValue}
-              style={{ height: 20, width: 100 }}
               style={styles.dropdown}
               onValueChange={(itemValue, itemIndex) =>
                 setSelectedValue(itemValue)
@@ -63,7 +61,6 @@ const Request = (props) => {
           <Text>Minimum</Text>
           <Picker
             selectedValue={selectedValue1}
-            style={{ height: 20, width: 100 }}
             style={styles.dropdown}
             onValueChange={(itemValue, itemIndex) =>
               setSelectedValue1(itemValue)
@@ -79,7 +76,6 @@ const Request = (props) => {
           <Text>Maximum</Text>
           <Picker
             selectedValue={selectedValue2}
-            style={{ height: 20, width: 100 }}
             style={styles.dropdown}
             onValueChange={(itemValue, itemIndex) =>
               setSelectedValue2(itemValue)
@@ -109,6 +105,9 @@ const styles = StyleSheet.create({
   body: {
     margin: 30,
   },
+  text: {
+    fontFamily: "Avenir",
+  },
   statusbar: {
     backgroundColor: "rgb(192, 165, 192)",
     height: 50,
@@ -116,6 +115,7 @@ const styles = StyleSheet.create({
   dropdown: {
     paddingBottom: 0,
     paddingTop: 0,
+    width: 200,
   },
   size: {
     paddingBottom: 0,
