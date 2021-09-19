@@ -13,14 +13,24 @@ export function Find() {
     setMessages([
       {
         _id: 1,
-        text: 'Hi would you be willing to study?',
+        text: 'Yes, what time?',
         createdAt: new Date(),
         user: {
           _id: 2,
-          name: 'React Native',
-          avatar: 'https://placeimg.com/140/140/any',
+          name: 'Jackie',
         },
       },
+
+      {
+        _id: 3,
+        text: 'Hi would you be willing to study?',
+        createdAt: new Date(),
+        user: {
+          _id: 4,
+          name: 'Rebecca',
+        },
+      },
+      
     ])
   }, [])
 
@@ -28,7 +38,7 @@ export function Find() {
     setMessages(previousMessages => GiftedChat.append(previousMessages, messages))
   }, [])
 
-  return (
+  return (  
     <GiftedChat
       messages={messages}
       onSend={messages => onSend(messages)}
