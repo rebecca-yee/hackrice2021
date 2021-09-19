@@ -5,7 +5,7 @@ export default function Card(props) {
   return (
     <View style={styles.card}>
       <View>{props.children}</View>
-      <Text style={styles.cardContent}>Press me to chat with your group!</Text>
+      {/* <Text style={styles.cardContent}>Press me to chat with your group!</Text> */}
     </View>
   );
 }
