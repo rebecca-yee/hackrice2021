@@ -154,11 +154,12 @@ class StudyGroup extends React.Component {
         <ScrollView>
           <Text
             style={{
-              color: "black",
+              color: "#05445E",
               fontFamily: "Avenir",
               fontSize: 20,
               textAlign: "center",
               top: 50,
+              fontWeight: "bold",
             }}
           >
             Choose Class
@@ -182,11 +183,12 @@ class StudyGroup extends React.Component {
           </Picker>
           <Text
             style={{
-              color: "black",
+              color: "#05445E",
               fontFamily: "Avenir",
               fontSize: 20,
               textAlign: "center",
               top: 50,
+              fontWeight: "bold",
             }}
           >
             Minimum Size
@@ -205,11 +207,12 @@ class StudyGroup extends React.Component {
           </Picker>
           <Text
             style={{
-              color: "black",
+              color: "#05445E",
               fontFamily: "Avenir",
               fontSize: 20,
               textAlign: "center",
               top: 50,
+              fontWeight: "bold",
             }}
           >
             Maximum Size
