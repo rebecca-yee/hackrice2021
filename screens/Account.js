@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { StyleSheet, Text, View, ScrollView } from "react-native";
+import { StyleSheet, Text, View, ScrollView, Image } from "react-native";
 import ListItem from "../components/ListItem";
 
 // components
@@ -38,6 +38,10 @@ function Account() {
           connections with their peers.
         </Text>
       </View>
+      <Image
+        style={{ resizeMode: "cover", right: 53 }}
+        source={require("../assets/logo.gif")}
+      />
     </ScrollView>
   );
 }

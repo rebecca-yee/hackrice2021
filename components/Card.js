@@ -23,8 +23,8 @@ const styles = StyleSheet.create({
     shadowRadius: 2,
     marginHorizontal: 4,
     marginVertical: 6,
-    paddingHorizontal: 70,
-    paddingVertical: 20,
+    paddingHorizontal: 40,
+    paddingVertical: 10,
   },
   cardContent: {
     fontSize: 10,
