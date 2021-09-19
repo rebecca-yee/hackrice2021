@@ -2,11 +2,11 @@ import React, { useState, useCallback, useEffect } from 'react'
 import { Platform, StyleSheet, Text, View, Button } from "react-native";
 import { NavigationContainer } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
-import { GiftedChat } from 'react-native-gifted-chat'
+import { GiftedChat } from "react-native-gifted-chat"
 
 // components
 
-export function Find() {
+export function Chat() {
   const [messages, setMessages] = useState([]);
 
   useEffect(() => {
@@ -67,4 +67,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default Find;
+export default Chat;
