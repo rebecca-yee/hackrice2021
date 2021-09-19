@@ -9,7 +9,7 @@ function Account() {
     <ScrollView style={styles.container}>
       <View style={styles.body}>
         <Image
-          style={{ resizeMode: "cover", right: 85, bottom: 120 }}
+          style={styles.img}
           source={require("../assets/logo.gif")}
         />
         <ListItem title="Name" subtitle="Jackie" />
@@ -51,20 +51,23 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: "#D4F1F4",
   },
+  img: {
+    resizeMode: "cover",
+    right: 5,
+    bottom: 10,
+    height: 350,
+    width: 350,
+  },
   body: {
-    margin: 30,
+    marginLeft: 30,
+    marginRight: 30,
+    marginBottom: 30,
+    paddingTop: 0
   },
   statusbar: {
     backgroundColor: "rgb(192, 165, 192)",
     height: 50,
-  },
-  balance: {
-    paddingBottom: 20,
-  },
-  input: {
-    paddingBottom: 20,
-    alignItems: "center",
-  },
+  }
 });
 
 export default Account;
