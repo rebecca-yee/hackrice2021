@@ -8,8 +8,8 @@ function Account() {
   return (
     <ScrollView style={styles.container}>
       <View style={styles.body}>
-        <ListItem title="Name" subtitle="John Smith" />
-        <ListItem title="Username" subtitle="@username" />
+        <ListItem title="Name" subtitle="Jackie Wu" />
+        <ListItem title="Username" subtitle="@jackie" />
 
         <Text
           style={{
