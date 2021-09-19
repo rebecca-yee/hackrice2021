@@ -4,8 +4,9 @@ import { View, Text, StyleSheet } from "react-native";
 function ListItem({ title, subtitle }) {
   return (
     <View>
-      <Text style={styles.heading}>{title}</Text>
-      <Text style={styles.subheading}>{subtitle}</Text>
+      <Text style={styles.heading}>
+        {title}: {subtitle}
+      </Text>
     </View>
   );
 }
