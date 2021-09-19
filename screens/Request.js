@@ -34,7 +34,6 @@ const Request = (props) => {
                             onValueChange={(itemValue, itemIndex) =>
                                 setSelectedValue(itemValue)
                             }
-                            onChangeText={(newclas) => props.textChange(newclas)}
                         >
                             <Picker.Item label="Math" value="MATH" />
                             <Picker.Item label="Science" value="SCIENCE" />
