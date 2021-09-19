@@ -8,6 +8,10 @@ function Account() {
   return (
     <ScrollView style={styles.container}>
       <View style={styles.body}>
+        <Image
+          style={{ resizeMode: "cover", right: 85, bottom: 120 }}
+          source={require("../assets/logo.gif")}
+        />
         <ListItem title="Name" subtitle="Jackie" />
         <ListItem title="Username" subtitle="@welovehackrice" />
 
@@ -38,10 +42,6 @@ function Account() {
           connections with their peers.
         </Text>
       </View>
-      <Image
-        style={{ resizeMode: "cover", right: 53 }}
-        source={require("../assets/logo.gif")}
-      />
     </ScrollView>
   );
 }
