@@ -28,8 +28,8 @@ class StudyGroup extends React.Component {
       input1: "2",
       input2: "5",
       groups: [
-        { id: 0, class: "MATH", num: 5 },
-        { id: 0, class: "SCIENCE", num: 2 },
+        { class: "MATH", num: 5 },
+        { class: "SCIENCE", num: 2 },
       ],
       mine: [
         { id: 0, name: "Jackie Wu", clas: "MATH", min: 2, max: 6 },
@@ -59,6 +59,31 @@ class StudyGroup extends React.Component {
     this.setState({ input2: input2 })
   }
 
+  findGroup(clas, min, max) {
+    let groups = this.state.groups
+    let users = this.state.users
+
+    let num = 0
+    let rows = []
+    for (var i = 0; i < users.length; i++) {
+      if (users.class == clas) {
+        if (users.min >= parseInt(min) && users.max < parseInt(max) && num < users.max) {
+          num = num + 1;
+          rows.push(groups.user)
+        }
+      }
+    }
+    groups.unshift({
+      clas: clas,
+      num: num,
+    })
+
+    this.setState({
+      groups,
+    });
+
+  }
+
   addNew() {
     let mine = this.state.mine;
 
@@ -68,6 +93,30 @@ class StudyGroup extends React.Component {
       clas: this.state.newclas,
       min: this.state.input1,
       max: this.state.input2,
+    });
+
+    let groups = this.state.groups
+    let users = this.state.users
+
+    let num = 1
+    let rows = []
+    for (var i = 0; i < users.length; i++) {
+      if (users[i].class == this.state.newclas) {
+        if (users[i].min >= parseInt(this.state.input1) && users[i].max < parseInt(this.state.input2) && num < users[i].max) {
+          num = num + 1;
+          rows.push(users[i].name)
+        }
+      }
+    }
+    if (num > 2) {
+      groups.unshift({
+        class: this.state.newclas,
+        num: num,
+      })
+    }
+
+    this.setState({
+      groups,
     });
 
     this.setState({
@@ -91,7 +140,7 @@ class StudyGroup extends React.Component {
       <View style={styles.container}>
         <View style={styles.balance}></View>
         <View style={styles.input}>
-          <ScrollView>
+          <ScrollView style={{ height: 300 }}>
             {this.state.groups.map((group) => (
               <Card>
                 <ListItem title="Subject" subtitle={group.class} />
@@ -110,10 +159,14 @@ class StudyGroup extends React.Component {
           <View style={{ flex: 1, height: 1, backgroundColor: "black" }} />
         </View>
         <ScrollView>
+          <Text>Choose Class</Text>
+
+          {/* {this.state.groups.map((group) => {
+            <Text>{group.class}, {group.num}</Text>
+          })} */}
+
           <Picker
             selectedValue={this.state.newclas}
-            style={{ height: 20, width: 100 }}
-            style={styles.dropdown}
             onValueChange={value => this.add(value)
             }
           >
@@ -127,8 +180,6 @@ class StudyGroup extends React.Component {
           <Text>Minimum Size</Text>
           <Picker
             selectedValue={this.state.input1}
-            style={{ height: 20, width: 100 }}
-            style={styles.dropdown}
             onValueChange={value => this.input1(value)
             }
           >
@@ -139,8 +190,6 @@ class StudyGroup extends React.Component {
           <Text>Maximum Size</Text>
           <Picker
             selectedValue={this.state.input2}
-            style={{ height: 20, width: 100 }}
-            style={styles.dropdown}
             onValueChange={value => this.input2(value)
             }
           >
