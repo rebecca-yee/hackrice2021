@@ -10,7 +10,7 @@ function Account() {
       <View style={styles.body}>
         <Image
           style={styles.img}
-          source={require("../assets/logo.gif")}
+          source={require("../assets/picture.png")}
         />
         <ListItem title="Name" subtitle="Jackie" />
         <ListItem title="Username" subtitle="@welovehackrice" />
@@ -53,6 +53,8 @@ const styles = StyleSheet.create({
   },
   img: {
     resizeMode: "cover",
+    marginTop: 10,
+    marginBottom: 5,
     right: 5,
     bottom: 10,
     height: 350,

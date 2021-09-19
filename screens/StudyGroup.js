@@ -24,7 +24,7 @@ class StudyGroup extends React.Component {
       name: "Jackie Wu",
       newclas: "MATH",
       input1: "2",
-      input2: "5",
+      input2: "3",
       groups: [
         { class: "MATH 355", num: 5 },
         { class: "COMP 140", num: 3 },
