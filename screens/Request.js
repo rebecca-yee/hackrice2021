@@ -17,8 +17,9 @@ import { createStackNavigator } from "@react-navigation/stack";
 
 const Request = (props) => {
     const [selectedValue, setSelectedValue] = useState("MATH");
-    const [selectedValue1, setSelectedValue1] = useState("2");
-    const [selectedValue2, setSelectedValue2] = useState("3");
+    // const [selectedValue1, setSelectedValue1] = useState("2");
+    // const [selectedValue2, setSelectedValue2] = useState("3");
+
 
     return (
         <ScrollView style={styles.container}>
@@ -60,14 +61,14 @@ const Request = (props) => {
                         placeholder="Maximum Group Size"
                         keyboardType="numeric"
                     /> */}
-                    <Text>Minimum</Text>
+                    {/* <Text>Minimum</Text>
 
                     <TextInput
                         style={styles.input}
                         onChangeText={(input1) => props.textChange(input1)}
                         value={props.input1}
                         placeholder='Minimum'
-                    />
+                    /> */}
                     {/* <Picker
                         selectedValue={selectedValue1}
                         style={{ height: 20, width: 100 }}
@@ -83,13 +84,13 @@ const Request = (props) => {
                         <Picker.Item label="6" value="6" />
                         <Picker.Item label="7" value="7" />
                     </Picker> */}
-                    <Text>Maximum</Text>
+                    {/* <Text>Maximum</Text>
                     <TextInput
                         style={styles.input}
                         onChangeText={(input2) => props.textChange(input2)}
                         value={props.input2}
                         placeholder='Maximum'
-                    />
+                    /> */}
                     {/* <Picker
                         selectedValue={selectedValue2}
                         style={{ height: 20, width: 100 }}
@@ -106,7 +107,7 @@ const Request = (props) => {
                         <Picker.Item label="8" value="8" />
                     </Picker> */}
                 </View>
-                <TouchableOpacity style={styles.addButton} onPress={props.addNew}>
+                <TouchableOpacity style={styles.addButton} onPress={add}>
                     <Text style={styles.addButtonText}>submit</Text>
                 </TouchableOpacity>
             </View>
