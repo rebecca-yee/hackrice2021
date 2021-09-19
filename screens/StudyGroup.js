@@ -10,7 +10,8 @@ import {
   Button,
   Picker,
   ScrollView,
-  TouchableOpacity
+  TouchableOpacity,
+  Alert
 } from "react-native";
 
 // components
@@ -59,30 +60,16 @@ class StudyGroup extends React.Component {
     this.setState({ input2: input2 })
   }
 
-  findGroup(clas, min, max) {
-    let groups = this.state.groups
-    let users = this.state.users
-
-    let num = 0
-    let rows = []
-    for (var i = 0; i < users.length; i++) {
-      if (users.class == clas) {
-        if (users.min >= parseInt(min) && users.max < parseInt(max) && num < users.max) {
-          num = num + 1;
-          rows.push(groups.user)
-        }
-      }
-    }
-    groups.unshift({
-      clas: clas,
-      num: num,
-    })
-
-    this.setState({
-      groups,
-    });
-
+  warn() {
+    Alert.alert(
+      "No groups found",
+      "Try again later!",
+      [
+        { text: "OK", onPress: () => console.log("OK Pressed") }
+      ]
+    )
   }
+
 
   addNew() {
     let mine = this.state.mine;
@@ -113,6 +100,8 @@ class StudyGroup extends React.Component {
         class: this.state.newclas,
         num: num,
       })
+    } else {
+      this.warn()
     }
 
     this.setState({
@@ -135,6 +124,7 @@ class StudyGroup extends React.Component {
       ) : (
         <View></View>
       );
+
 
     return (
       <View style={styles.container}>
@@ -200,6 +190,7 @@ class StudyGroup extends React.Component {
           <TouchableOpacity style={styles.addButton} onPress={this.addNew.bind(this)}>
             <Text style={styles.addButtonText}>submit</Text>
           </TouchableOpacity>
+
         </ScrollView>
 
 
