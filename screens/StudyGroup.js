@@ -19,7 +19,7 @@ class StudyGroup extends React.Component {
 
     this.state = {
       name: "Jackie Wu",
-      clas: "MATH",
+      newclas: "MATH",
       input1: "",
       input2: "",
       groups: [
@@ -48,16 +48,16 @@ class StudyGroup extends React.Component {
     mine.unshift({
       id: 0,
       name: "Jackie Wu",
-      class: this.state.clas,
+      class: this.state.newclas,
       min: this.state.input1,
       max: this.state.input2,
     });
 
     this.setState({
       mine,
-      // clas: 'MATH',
-      // input1: '',
-      // input2: ''
+      newclas: 'MATH',
+      input1: '',
+      input2: ''
     });
   }
 
@@ -84,14 +84,14 @@ class StudyGroup extends React.Component {
           </ScrollView>
         </View>
         <Request
-          changeValue={(clas) => this.setState({ clas })}
+          textChange={input2 => this.setState({ input2 })}
           addNew={() => this.addNew()}
         />
-        {/* <ScrollView>
+        <ScrollView>
           {this.state.mine.map((m) => (
             <Text>{m.class}, {m.min}, {m.max}</Text>
           ))}
-        </ScrollView> */}
+        </ScrollView>
       </View>
     );
   }
