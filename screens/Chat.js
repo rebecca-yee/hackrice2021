@@ -2,7 +2,7 @@ import React, { useState, useCallback, useEffect } from 'react'
 import { Platform, StyleSheet, Text, View, Button } from "react-native";
 import { NavigationContainer } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
-import { GiftedChat } from 'react-native-gifted-chat'
+import { GiftedChat } from "react-native-gifted-chat"
 
 // components
 
