@@ -86,7 +86,7 @@ class StudyGroup extends React.Component {
     let users = this.state.users
 
     let num = 1
-    let rows = []
+    let rows = [this.state.name]
     for (var i = 0; i < users.length; i++) {
       if (users[i].class == this.state.newclas) {
         if (users[i].min >= parseInt(this.state.input1) && users[i].max < parseInt(this.state.input2) && num < users[i].max) {
@@ -99,6 +99,7 @@ class StudyGroup extends React.Component {
       groups.unshift({
         class: this.state.newclas,
         num: num,
+        users: rows
       })
     } else {
       this.warn()
