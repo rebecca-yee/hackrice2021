@@ -10,19 +10,16 @@ import {
   Button,
   Picker,
   ScrollView,
-  TouchableOpacity
+  TouchableOpacity,
 } from "react-native";
 
 // components
 
 class StudyGroup extends React.Component {
-
   constructor() {
     super();
 
-
     this.state = {
-
       name: "Jackie Wu",
       newclas: "MATH",
       input1: "2",
@@ -48,15 +45,15 @@ class StudyGroup extends React.Component {
   }
 
   add(value) {
-    this.setState({ newclas: value })
+    this.setState({ newclas: value });
   }
 
   input1(input1) {
-    this.setState({ input1: input1 })
+    this.setState({ input1: input1 });
   }
 
   input2(input2) {
-    this.setState({ input2: input2 })
+    this.setState({ input2: input2 });
   }
 
   addNew() {
@@ -72,12 +69,11 @@ class StudyGroup extends React.Component {
 
     this.setState({
       mine,
-      newclas: 'MATH',
-      input1: '2',
-      input2: '5'
+      newclas: "MATH",
+      input1: "2",
+      input2: "5",
     });
   }
-
 
   render() {
     const statusbar =
@@ -114,8 +110,7 @@ class StudyGroup extends React.Component {
             selectedValue={this.state.newclas}
             style={{ height: 20, width: 100 }}
             style={styles.dropdown}
-            onValueChange={value => this.add(value)
-            }
+            onValueChange={(value) => this.add(value)}
           >
             <Picker.Item label="Math" value="MATH" />
             <Picker.Item label="Science" value="SCIENCE" />
@@ -129,8 +124,7 @@ class StudyGroup extends React.Component {
             selectedValue={this.state.input1}
             style={{ height: 20, width: 100 }}
             style={styles.dropdown}
-            onValueChange={value => this.input1(value)
-            }
+            onValueChange={(value) => this.input1(value)}
           >
             <Picker.Item label="2" value="2" />
             <Picker.Item label="3" value="3" />
@@ -141,20 +135,20 @@ class StudyGroup extends React.Component {
             selectedValue={this.state.input2}
             style={{ height: 20, width: 100 }}
             style={styles.dropdown}
-            onValueChange={value => this.input2(value)
-            }
+            onValueChange={(value) => this.input2(value)}
           >
             <Picker.Item label="5" value="5" />
             <Picker.Item label="6" value="6" />
             <Picker.Item label="7" value="7" />
           </Picker>
-          <TouchableOpacity style={styles.addButton} onPress={this.addNew.bind(this)}>
+          <TouchableOpacity
+            style={styles.addButton}
+            onPress={this.addNew.bind(this)}
+          >
             <Text style={styles.addButtonText}>submit</Text>
           </TouchableOpacity>
         </ScrollView>
-
-
-      </View >
+      </View>
     );
   }
 }
