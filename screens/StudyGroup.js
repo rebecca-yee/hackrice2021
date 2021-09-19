@@ -8,16 +8,21 @@ import {
   Text,
   View,
   Button,
+  Picker,
   ScrollView,
+  TouchableOpacity
 } from "react-native";
 
 // components
 
 class StudyGroup extends React.Component {
+
   constructor() {
     super();
 
+
     this.state = {
+
       name: "Jackie Wu",
       newclas: "MATH",
       input1: "",
@@ -28,7 +33,7 @@ class StudyGroup extends React.Component {
       ],
       mine: [
         { id: 0, name: "Jackie Wu", clas: "MATH", min: 2, max: 6 },
-        { id: 0, name: "Jackie Wu", clas: "SCIENCE", min: 2, max: 6 },
+        { id: 0, name: "Jackie Wu", clas: "SCIENCE", min: 4, max: 7 },
       ],
 
       users: [
@@ -48,7 +53,7 @@ class StudyGroup extends React.Component {
     mine.unshift({
       id: 0,
       name: "Jackie Wu",
-      class: this.state.newclas,
+      clas: this.state.newclas,
       min: this.state.input1,
       max: this.state.input2,
     });
@@ -91,16 +96,23 @@ class StudyGroup extends React.Component {
           </View>
           <View style={{ flex: 1, height: 1, backgroundColor: "black" }} />
         </View>
+
         <Request
+          textChange={input1 => this.setState({ input1 })}
           textChange={input2 => this.setState({ input2 })}
           addNew={() => this.addNew()}
         />
-        <ScrollView>
+        {/* <ScrollView>
+          <Text
+          >
+            {this.state.input1}
+
+          </Text>
           {this.state.mine.map((m) => (
-            <Text>{m.class}, {m.min}, {m.max}</Text>
+            <Text>Class: {m.clas}, Min: {m.min}, Max: {m.max}</Text>
           ))}
-        </ScrollView>
-      </View>
+        </ScrollView> */}
+      </View >
     );
   }
 }

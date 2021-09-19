@@ -67,6 +67,7 @@ const Request = (props) => {
                         style={styles.input}
                         onChangeText={(input1) => props.textChange(input1)}
                         value={props.input1}
+                        placeholder='Minimum'
                     />
                     {/* <Picker
                         selectedValue={selectedValue1}
@@ -88,6 +89,7 @@ const Request = (props) => {
                         style={styles.input}
                         onChangeText={(input2) => props.textChange(input2)}
                         value={props.input2}
+                        placeholder='Maximum'
                     />
                     {/* <Picker
                         selectedValue={selectedValue2}
