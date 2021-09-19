@@ -110,11 +110,6 @@ class StudyGroup extends React.Component {
           <View style={{ flex: 1, height: 1, backgroundColor: "black" }} />
         </View>
         <ScrollView>
-          <ScrollView>
-            {this.state.mine.map((m) => (
-              <Text>Class: {m.clas}, Min: {m.min}, Max: {m.max}</Text>
-            ))}
-          </ScrollView>
           <Picker
             selectedValue={this.state.newclas}
             style={{ height: 20, width: 100 }}
@@ -129,6 +124,7 @@ class StudyGroup extends React.Component {
             <Picker.Item label="Art" value="ART" />
             <Picker.Item label="Music" value="MUSIC" />
           </Picker>
+          <Text>Minimum Size</Text>
           <Picker
             selectedValue={this.state.input1}
             style={{ height: 20, width: 100 }}
@@ -140,6 +136,7 @@ class StudyGroup extends React.Component {
             <Picker.Item label="3" value="3" />
             <Picker.Item label="4" value="4" />
           </Picker>
+          <Text>Maximum Size</Text>
           <Picker
             selectedValue={this.state.input2}
             style={{ height: 20, width: 100 }}
@@ -156,11 +153,6 @@ class StudyGroup extends React.Component {
           </TouchableOpacity>
         </ScrollView>
 
-        {/* <Request
-          textChange={input1 => this.setState({ input1 })}
-          textChange={input2 => this.setState({ input2 })}
-          addNew={() => this.addNew()}
-        /> */}
 
       </View >
     );
