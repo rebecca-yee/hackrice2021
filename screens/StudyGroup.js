@@ -219,6 +219,8 @@ class StudyGroup extends React.Component {
             onValueChange={(value) => this.input2(value)}
             style={{ width: 200, left: 90 }}
           >
+            <Picker.Item label="3" value="5" />
+            <Picker.Item label="4" value="6" />
             <Picker.Item label="5" value="5" />
             <Picker.Item label="6" value="6" />
             <Picker.Item label="7" value="7" />

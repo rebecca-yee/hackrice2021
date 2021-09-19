@@ -30,7 +30,7 @@ export function Chat() {
           name: 'Rebecca',
         },
       },
-      
+
     ])
   }, [])
 
@@ -38,7 +38,7 @@ export function Chat() {
     setMessages(previousMessages => GiftedChat.append(previousMessages, messages))
   }, [])
 
-  return (  
+  return (
     <GiftedChat
       messages={messages}
       onSend={messages => onSend(messages)}
